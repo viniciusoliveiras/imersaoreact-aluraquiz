@@ -37,7 +37,7 @@ export function IndexPage() {
           property="og:description"
           content="Website criado durante a Imersão React v2 da Alura."
         />
-        <meta property="og:image" content="" />
+        <meta property="og:image" content={db.bg} />
 
         {/*  Twitter  */}
         <meta property="twitter:card" content="summary_large_image" />
@@ -50,7 +50,7 @@ export function IndexPage() {
           property="twitter:description"
           content="Website criado durante a Imersão React v2 da Alura."
         />
-        <meta property="twitter:image" content="" />
+        <meta property="twitter:image" content={db.bg} />
       </Head>
       <p>Hello world!</p>
     </div>
