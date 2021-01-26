@@ -14,49 +14,6 @@ import Head from "next/head";
 //   background-repeat: no-repeat;
 // `;
 
-export function IndexPage() {
-  return (
-    <div>
-      <Head>
-        {/*  Primary Meta Tags  */}
-        <title>Vini Quiz</title>
-        <meta name="title" content="Vini Quiz" />
-        <meta
-          name="description"
-          content="Website criado durante a Imersão React v2 da Alura."
-        />
-
-        {/*  Open Graph / Facebook  */}
-        <meta property="og:type" content="website" />
-        <meta
-          property="og:url"
-          content="https://imersaoreact-aluraquiz.viniciusoliveiras.vercel.app/"
-        />
-        <meta property="og:title" content="Vini Quiz" />
-        <meta
-          property="og:description"
-          content="Website criado durante a Imersão React v2 da Alura."
-        />
-        <meta property="og:image" content={db.bg} />
-
-        {/*  Twitter  */}
-        <meta property="twitter:card" content="summary_large_image" />
-        <meta
-          property="twitter:url"
-          content="https://imersaoreact-aluraquiz.viniciusoliveiras.vercel.app/"
-        />
-        <meta property="twitter:title" content="Vini Quiz" />
-        <meta
-          property="twitter:description"
-          content="Website criado durante a Imersão React v2 da Alura."
-        />
-        <meta property="twitter:image" content={db.bg} />
-      </Head>
-      <p>Hello world!</p>
-    </div>
-  );
-}
-
 export const QuizContainer = styled.div`
   width: 100%;
   max-width: 350px;
@@ -71,33 +28,71 @@ export const QuizContainer = styled.div`
 
 export default function Home() {
   return (
-    <QuizBackground backgroundImage={db.bg}>
-      <QuizContainer>
-        <Widget>
-          <Widget.Header>
-            <h1>{db.title}</h1>
-          </Widget.Header>
-          <Widget.Content>
-            <p>{db.description}</p>
-          </Widget.Content>
-        </Widget>
-        <Widget>
-          <Widget.Header>
-            <h1>Quizes da Galera</h1>
-          </Widget.Header>
-          <Widget.Content>
-            <p>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-              eiusmod tempor incididunt ut labore et dolore magna aliqua.
-              Scelerisque varius morbi enim nunc. Id neque aliquam vestibulum
-              morbi blandit cursus risus at ultrices. Purus in massa tempor nec
-              feugiat nisl. In hac habitasse platea dictumst.
-            </p>
-          </Widget.Content>
-        </Widget>
-        <Footer />
-      </QuizContainer>
-      <GithubCorner projectUrl="https://github.com/viniciusoliveiras" />
-    </QuizBackground>
+    <>
+      <Head>
+        {/*  Primary Meta Tags  */}
+        <title>Vini Quiz</title>
+        <meta name="title" content={db.title} />
+        <meta
+          name="description"
+          content={db.description}
+        />
+
+        {/*  Open Graph / Facebook  */}
+        <meta property="og:type" content="website" />
+        <meta
+          property="og:url"
+          content="https://imersaoreact-aluraquiz.viniciusoliveiras.vercel.app/"
+        />
+        <meta property="og:title" content="Vini Quiz" />
+        <meta
+          property="og:description"
+          content={db.description}
+        />
+        <meta property="og:image" content={db.bg} />
+
+        {/*  Twitter  */}
+        <meta property="twitter:card" content="summary_large_image" />
+        <meta
+          property="twitter:url"
+          content="https://imersaoreact-aluraquiz.viniciusoliveiras.vercel.app/"
+        />
+        <meta property="twitter:title" content={db.title} />
+        <meta
+          property="twitter:description"
+          content={db.description}
+        />
+        <meta property="twitter:image" content={db.bg} />
+      </Head>
+
+      <QuizBackground backgroundImage={db.bg}>
+        <QuizContainer>
+          <Widget>
+            <Widget.Header>
+              <h1>{db.title}</h1>
+            </Widget.Header>
+            <Widget.Content>
+              <p>{db.description}</p>
+            </Widget.Content>
+          </Widget>
+          <Widget>
+            <Widget.Header>
+              <h1>Quizes da Galera</h1>
+            </Widget.Header>
+            <Widget.Content>
+              <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+                eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                Scelerisque varius morbi enim nunc. Id neque aliquam vestibulum
+                morbi blandit cursus risus at ultrices. Purus in massa tempor
+                nec feugiat nisl. In hac habitasse platea dictumst.
+              </p>
+            </Widget.Content>
+          </Widget>
+          <Footer />
+        </QuizContainer>
+        <GithubCorner projectUrl="https://github.com/viniciusoliveiras" />
+      </QuizBackground>
+    </>
   );
 }
