@@ -1,18 +1,14 @@
-import styled from "styled-components";
-import db from "../db.json";
-import Widget from "../src/components/Widget";
-import Footer from "../src/components/Footer";
-import GithubCorner from "../src/components/GithubCorner";
-import QuizBackground from "../src/components/QuizBackground";
-import Head from "next/head";
+import React, { useState } from 'react';
+import styled from 'styled-components';
+import { useRouter } from 'next/router';
 
-// const BackgroundImage = styled.div`
-//   background-image: url(${db.bg});
-//   flex: 1;
-//   background-size: cover;
-//   background-position: center;
-//   background-repeat: no-repeat;
-// `;
+import db from '../db.json';
+// eslint-disable-next-line import/no-named-as-default
+import Widget from '../src/components/Widget';
+import QuizLogo from '../src/components/QuizLogo';
+import QuizBackground from '../src/components/QuizBackground';
+import Footer from '../src/components/Footer';
+import GithubCorner from '../src/components/GithubCorner';
 
 export const QuizContainer = styled.div`
   width: 100%;
@@ -27,54 +23,48 @@ export const QuizContainer = styled.div`
 `;
 
 export default function Home() {
+  const router = useRouter();
+  const [name, setName] = React.useState('');
+  console.log('RETORNO DO useState', name, useState);
+
   return (
     <>
-      <Head>
-        {/*  Primary Meta Tags  */}
-        <title>Vini Quiz</title>
-        <meta name="title" content={db.title} />
-        <meta
-          name="description"
-          content={db.description}
-        />
-
-        {/*  Open Graph / Facebook  */}
-        <meta property="og:type" content="website" />
-        <meta
-          property="og:url"
-          content="https://imersaoreact-aluraquiz.viniciusoliveiras.vercel.app/"
-        />
-        <meta property="og:title" content="Vini Quiz" />
-        <meta
-          property="og:description"
-          content={db.description}
-        />
-        <meta property="og:image" content={db.bg} />
-
-        {/*  Twitter  */}
-        <meta property="twitter:card" content="summary_large_image" />
-        <meta
-          property="twitter:url"
-          content="https://imersaoreact-aluraquiz.viniciusoliveiras.vercel.app/"
-        />
-        <meta property="twitter:title" content={db.title} />
-        <meta
-          property="twitter:description"
-          content={db.description}
-        />
-        <meta property="twitter:image" content={db.bg} />
-      </Head>
-
       <QuizBackground backgroundImage={db.bg}>
         <QuizContainer>
+          <QuizLogo />
           <Widget>
             <Widget.Header>
               <h1>{db.title}</h1>
             </Widget.Header>
             <Widget.Content>
-              <p>{db.description}</p>
+              <form
+                onSubmit={function (infosDoEvento) {
+                  infosDoEvento.preventDefault();
+
+                  router.push(`/quiz?name=${name}`);
+
+                  console.log('Sending request through React');
+                  // router manda para proxima página
+                }}
+              >
+                <input
+                  onChange={function (infosDoEvento) {
+                    console.log(infosDoEvento.target.value);
+                    // STATE
+                    // name = infosDoEvento.target.value
+
+                    setName(infosDoEvento.target.value);
+                  }}
+                  placeholder="Diz aí seu nome para jogar"
+                />
+                <button type="submit" disabled={name.length === 0}>
+                  {/*  eslint-disable-next-line react/jsx-one-expression-per-line */}
+                  Jogar {name}
+                </button>
+              </form>
             </Widget.Content>
           </Widget>
+
           <Widget>
             <Widget.Header>
               <h1>Quizes da Galera</h1>
@@ -91,7 +81,7 @@ export default function Home() {
           </Widget>
           <Footer />
         </QuizContainer>
-        <GithubCorner projectUrl="https://github.com/viniciusoliveiras" />
+        <GithubCorner projectUrl="https://github.com/viniciusoliveiras/imersaoreact-aluraquiz" />
       </QuizBackground>
     </>
   );
