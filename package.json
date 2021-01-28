@@ -6,13 +6,15 @@
     "build": "next build",
     "start": "next start",
     "eslint:init": "eslint --init",
-    "lint":"eslint ./ --fix"
+    "lint": "eslint ./ --fix"
   },
   "dependencies": {
     "next": "latest",
+    "prop-types": "^15.7.2",
     "react": "^16.8.0",
     "react-dom": "^16.8.0",
     "react-is": "^16.8.0",
+    "react-loader-spinner": "^3.1.14",
     "styled-components": "^5.0.0"
   },
   "devDependencies": {
