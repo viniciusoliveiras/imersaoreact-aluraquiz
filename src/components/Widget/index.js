@@ -16,10 +16,15 @@ export const Widget = styled.div`
     line-height: 1;
     margin-bottom: 0;
   }
-  p {
+  p,
+  li {
     font-size: 14px;
     font-weight: 400;
-    line-height: 1;
+    line-height: 1.3;
+  }
+
+  a{
+    margin: 0 12%;
   }
 `;
 
@@ -32,6 +37,11 @@ Widget.Header = styled.header`
 
   * {
     margin: 0;
+  }
+
+  a {
+    display: block;
+    margin: 0 5%;
   }
 `;
 
@@ -47,7 +57,7 @@ Widget.Content = styled.div`
     list-style: none;
     padding: 0;
   }
-  .loader{
+  .loader {
     text-align: center;
   }
 `;
