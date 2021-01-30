@@ -22,10 +22,6 @@ export const Widget = styled.div`
     font-weight: 400;
     line-height: 1.3;
   }
-
-  a{
-    margin: 0 12%;
-  }
 `;
 
 Widget.Header = styled.header`
@@ -37,11 +33,6 @@ Widget.Header = styled.header`
 
   * {
     margin: 0;
-  }
-
-  a {
-    display: block;
-    margin: 0 5%;
   }
 `;
 

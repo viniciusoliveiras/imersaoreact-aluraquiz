@@ -2,23 +2,26 @@
 /* eslint-disable react/prop-types */
 import React from 'react';
 import Loader from 'react-loader-spinner';
-import db from '../db.json';
+import db from '../../db.json';
 // eslint-disable-next-line import/no-named-as-default
-import Widget from '../src/components/Widget';
-import BackLinkArrow from '../src/components/BackLinkArrow';
-import QuizLogo from '../src/components/QuizLogo';
-import QuizBackground from '../src/components/QuizBackground';
-import QuizContainer from '../src/components/QuizContainer';
-import AlternativesForm from '../src/components/AlternativesForm';
-import Button from '../src/components/Button';
+import Widget from '../../src/components/Widget';
+import QuizLogo from '../../src/components/QuizLogo';
+import QuizBackground from '../../src/components/QuizBackground';
+import QuizContainer from '../../src/components/QuizContainer';
+import AlternativesForm from '../../src/components/AlternativesForm';
+import Button from '../../src/components/Button';
 import 'react-loader-spinner/dist/loader/css/react-spinner-loader.css';
+import BackLinkArrow from '../../src/components/BackLinkArrow';
 
 const LoadTime = 1200;
 
 function ResultWidget({ results }) {
   return (
     <Widget>
-      <Widget.Header>RESULTADO</Widget.Header>
+      <Widget.Header>
+        <BackLinkArrow href="/" />
+        RESULTADO
+      </Widget.Header>
 
       <Widget.Content>
         <p>
@@ -60,7 +63,7 @@ function LoadingWidget() {
         <Loader
           className="loader"
           type="BallTriangle"
-          color="#004C4C"
+          color="#FFFFFF"
           height={100}
           width={100}
           timeout={LoadTime}
@@ -89,9 +92,7 @@ function QuestionWidget({
   return (
     <Widget>
       <Widget.Header>
-        <a href="/">
-          <BackLinkArrow />
-        </a>
+        <BackLinkArrow href="/" />
         <h3>{`Pergunta ${questionIndex + 1} de ${totalQuestions}`}</h3>
       </Widget.Header>
 

@@ -1,65 +1,65 @@
 {
   "bg": "https://i.imgur.com/XznnJy6.jpg",
-  "title": "Vini Quiz",
+  "title": "Random Quiz",
   "description": "Teste o seu conhecimento sobre assuntos aleatórios.",
   "questions": [
     {
-      "image": "https://media.giphy.com/media/a5viI92PAF89q/giphy.gif",
-      "title": "De quem é a famosa frase “Penso, logo existo”?",
-      "description": "Essa é pra aquecer",
-      "answer": 1,
-      "alternatives": ["Platão", "Descartes", "Sócrates", "Galileu Galilei"]
-    },
-    {
-      "image": "https://media.giphy.com/media/xUPGcoi5ig56y3JcKA/giphy.gif",
-      "title": "De onde é a invenção do chuveiro elétrico?",
-      "description": "",
-      "answer": 2,
+      "image": "https://media.giphy.com/media/l3vQZ7KkT2e07Lcqc/giphy.gif",
+      "title": "Quantos humanos os mosquitos matam por ano?",
+      "description": "Provavelmente não chega nem perto da quantidade que nós matamos eles",
+      "answer": 3,
       "alternatives": [
-        "França",
-        "Inglaterra",
-        "Brasil",
-        "Austrália"
+        "0",
+        "Cerca de 15 mil",
+        "Cerca de 135 mil",
+        "Cerca de 725 mil"
       ]
     },
     {
-      "image": "https://media.giphy.com/media/CA32wUtMUvrUY/giphy.gif",
-      "title": "O que a palavra legend significa em português?",
+      "image": "https://thumbs.gfycat.com/NastyDesertedHousefly-size_restricted.gif",
+      "title": "Quantos milímetros o Monte Everest cresce por ano?",
       "description": "",
       "answer": 2,
-      "alternatives": [
-        "Legenda",
-        "Conto",
-        "Lenda",
-        "Legendário"
-      ]
+      "alternatives": ["0", "2", "4", "Ele cresce?"]
     },
     {
-      "image": "https://media.giphy.com/media/5bGYUuT3VEVLa/giphy.gif",
-      "title": "Qual a montanha mais alta do Brasil?",
+      "image": "https://thumbs.gfycat.com/LikableBitterElver-size_restricted.gif",
+      "title": "O cérebro humano, é formado em sua maior parte por:",
+      "description": "",
+      "answer": 3,
+      "alternatives": ["Células", "Fibras", "Tecido", "Água"]
+    },
+    {
+      "image": "https://media0.giphy.com/media/12XGECQYa80YAo/giphy.gif",
+      "title": "Onde e quando foi criado o cachorro quente?",
       "description": "",
       "answer": 0,
       "alternatives": [
-        "Pico da Neblina",
-        "Pico Paraná",
-        "Monte Roraima",
-        "Pico Maior de Friburgo"
+        "Alemanha - séc. XV",
+        "França - séc. XVI",
+        "Japão - séc. XVII",
+        "Turquia - séc. XVIII"
       ]
     },
     {
-      "image": "https://media.giphy.com/media/2k4CSOMmoFZYc/giphy.gif",
-      "title": "Em que ano nasceu a Rainha Elizabeth II?",
-      "description": "",
+      "image": "https://media.giphy.com/media/d3yxg15kJppJilnW/giphy.gif",
+      "title": "Quantas horas tem um dia?",
+      "description": "Essa é moleza hein!?",
       "answer": 2,
       "alternatives": [
-        "1922",
-        "1924",
-        "1926",
-        "No mesmo ano que Adão"
+        "23 horas e 52 minutos",
+        "23 horas e 54 minutos",
+        "23 horas e 56 minutos",
+        "24 horas"
       ]
     }
   ],
-  "external": [""],
+  "external": [
+    "https://pato-quiz-nextjs.theedouglasam.vercel.app/",
+    "https://flash-quiz-next.davidlpc1.vercel.app/",
+    "https://harry-potter-quiz.brunogerbasi.vercel.app/",
+    "https://1sec-quiz.victoroda.vercel.app/"
+  ],
   "theme": {
     "colors": {
       "primary": "#004C4C",

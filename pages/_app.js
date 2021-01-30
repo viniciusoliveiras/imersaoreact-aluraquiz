@@ -35,7 +35,7 @@ export default function App({ Component, pageProps }) {
     <>
       <Head>
         {/*  Primary Meta Tags  */}
-        <title>Vini Quiz</title>
+        <title>Random Quiz</title>
         <meta name="title" content={db.title} />
         <meta name="description" content={db.description} />
 
@@ -45,7 +45,7 @@ export default function App({ Component, pageProps }) {
           property="og:url"
           content="https://imersaoreact-aluraquiz.viniciusoliveiras.vercel.app/"
         />
-        <meta property="og:title" content="Vini Quiz" />
+        <meta property="og:title" content={db.title} />
         <meta property="og:description" content={db.description} />
         <meta property="og:image" content={db.bg} />
 
