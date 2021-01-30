@@ -36,6 +36,7 @@ export default function App({ Component, pageProps }) {
       <Head>
         {/*  Primary Meta Tags  */}
         <title>Random Quiz</title>
+        <link rel="shortcut icon" href="/favicon.png" />
         <meta name="title" content={db.title} />
         <meta name="description" content={db.description} />
 
@@ -43,7 +44,7 @@ export default function App({ Component, pageProps }) {
         <meta property="og:type" content="website" />
         <meta
           property="og:url"
-          content="https://imersaoreact-aluraquiz.viniciusoliveiras.vercel.app/"
+          content="https://random-quiz.viniciusoliveiras.vercel.app/"
         />
         <meta property="og:title" content={db.title} />
         <meta property="og:description" content={db.description} />
@@ -53,7 +54,7 @@ export default function App({ Component, pageProps }) {
         <meta property="twitter:card" content="summary_large_image" />
         <meta
           property="twitter:url"
-          content="https://imersaoreact-aluraquiz.viniciusoliveiras.vercel.app/"
+          content="https://random-quiz.viniciusoliveiras.vercel.app/"
         />
         <meta property="twitter:title" content={db.title} />
         <meta property="twitter:description" content={db.description} />
